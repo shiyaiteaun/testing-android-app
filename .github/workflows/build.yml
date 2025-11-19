@@ -53,10 +53,14 @@ jobs:
     - name: Show build errors
       if: failure()
       run: |
-        echo "=== Build Errors ==="
-        tail -100 build.log | grep -i "error\|failed\|exception" || echo "No specific errors found in last 100 lines"
-        echo "=== Full Error Summary ==="
-        tail -50 build.log
+        echo "=== Kotlin Compilation Errors ==="
+        grep -A 10 "error:" build.log | head -50 || echo "No Kotlin errors found"
+        echo ""
+        echo "=== All Errors ==="
+        grep -i "error\|failed\|exception" build.log | head -100 || echo "No errors found"
+        echo ""
+        echo "=== Last 100 lines of build log ==="
+        tail -100 build.log
       shell: bash
       
     - name: Upload APK
