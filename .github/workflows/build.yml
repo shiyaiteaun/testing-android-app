@@ -47,20 +47,37 @@ jobs:
       continue-on-error: true
       
     - name: Build APK
-      run: ./gradlew assembleDebug --stacktrace --info 2>&1 | tee build.log
+      run: |
+        ./gradlew clean
+        ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log || true
+      shell: bash
+      
+    - name: Check build status
+      run: |
+        if grep -q "BUILD FAILED" build.log; then
+          echo "BUILD_FAILED=true" >> $GITHUB_ENV
+        else
+          echo "BUILD_FAILED=false" >> $GITHUB_ENV
+        fi
       shell: bash
       
     - name: Show build errors
-      if: failure()
+      if: env.BUILD_FAILED == 'true'
       run: |
         echo "=== Kotlin Compilation Errors ==="
-        grep -A 10 "error:" build.log | head -50 || echo "No Kotlin errors found"
+        grep -B 5 -A 20 "e:" build.log | head -100 || echo "No 'e:' errors found"
         echo ""
-        echo "=== All Errors ==="
-        grep -i "error\|failed\|exception" build.log | head -100 || echo "No errors found"
+        echo "=== Unresolved Reference Errors ==="
+        grep -B 3 -A 10 "Unresolved reference" build.log | head -50 || echo "No unresolved reference errors"
         echo ""
-        echo "=== Last 100 lines of build log ==="
-        tail -100 build.log
+        echo "=== Type Mismatch Errors ==="
+        grep -B 3 -A 10 "Type mismatch" build.log | head -50 || echo "No type mismatch errors"
+        echo ""
+        echo "=== CompileDebugKotlin Section ==="
+        awk '/:app:compileDebugKotlin/,/FAILED|SUCCESS/' build.log | head -300 || echo "No compileDebugKotlin section"
+        echo ""
+        echo "=== Full Build Log (Last 500 lines) ==="
+        tail -500 build.log
       shell: bash
       
     - name: Upload APK
