@@ -1,0 +1,3 @@
+rootProject.name = "Awaken Company"
+include ':app'
+

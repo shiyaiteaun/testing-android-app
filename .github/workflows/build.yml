@@ -1,0 +1,68 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+      
+    - name: Fix gradlew line endings and permissions
+      run: |
+        dos2unix gradlew 2>/dev/null || sed -i 's/\r$//' gradlew
+        chmod +x gradlew
+      shell: bash
+      
+    - name: Check Gradle Wrapper
+      run: |
+        ls -la gradle/wrapper/ || echo "Gradle wrapper directory not found"
+        ls -la gradle/wrapper/*.jar || echo "Gradle wrapper JAR not found"
+      shell: bash
+      continue-on-error: true
+      
+    - name: Generate Gradle Wrapper (if missing)
+      run: |
+        if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
+          echo "Generating Gradle wrapper..."
+          gradle wrapper --gradle-version 8.2
+        fi
+      shell: bash
+      continue-on-error: true
+      
+    - name: Build APK
+      run: ./gradlew assembleDebug --stacktrace --info 2>&1 | tee build.log
+      shell: bash
+      
+    - name: Show build errors
+      if: failure()
+      run: |
+        echo "=== Build Errors ==="
+        tail -100 build.log | grep -i "error\|failed\|exception" || echo "No specific errors found in last 100 lines"
+        echo "=== Full Error Summary ==="
+        tail -50 build.log
+      shell: bash
+      
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug
+        path: app/build/outputs/apk/debug/app-debug.apk
+        if-no-files-found: warn
+

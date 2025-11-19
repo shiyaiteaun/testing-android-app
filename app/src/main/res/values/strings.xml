@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Awaken Company</string>
+    
+    <!-- Auth -->
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_as_admin">Login as Admin</string>
+    <string name="login_as_user">Login as User</string>
+    <string name="invalid_credentials">Invalid username or password</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Admin -->
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="incoming_items">Incoming Items</string>
+    <string name="sold_items">Sold Items</string>
+    <string name="remaining_stock">Remaining Stock</string>
+    <string name="financial_statement">Financial Statement</string>
+    <string name="user_management">User Management</string>
+    
+    <!-- User -->
+    <string name="user_dashboard">Shop</string>
+    <string name="products">Products</string>
+    <string name="cart">Cart</string>
+    <string name="orders">Orders</string>
+    
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="total">Total</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="item_code">Item Code</string>
+    <string name="item_name">Item Name</string>
+    <string name="category">Category</string>
+    <string name="stock">Stock</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="order_placed">Order Placed Successfully</string>
+    <string name="remove">Remove</string>
+    <string name="empty_cart">Your cart is empty</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="customer_address">Customer Address</string>
+    <string name="customer_phone">Phone Number</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="cash">Cash</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="confirm_order">Confirm Order</string>
+    
+    <!-- Errors -->
+    <string name="error_required">This field is required</string>
+    <string name="error_invalid">Invalid input</string>
+    <string name="error_network">Network error. Please try again.</string>
+    
+</resources>
+
