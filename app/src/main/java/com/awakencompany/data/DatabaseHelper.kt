@@ -49,10 +49,14 @@ abstract class AppDatabase : RoomDatabase() {
                     .fallbackToDestructiveMigration()
                     .build()
                 
-                // Initialize default admin account
+                // Initialize default admin account in background
                 Executors.newSingleThreadExecutor().execute {
-                    kotlinx.coroutines.runBlocking {
-                        initializeDefaultAdmin(instance.adminDao())
+                    try {
+                        kotlinx.coroutines.runBlocking {
+                            initializeDefaultAdmin(instance.adminDao())
+                        }
+                    } catch (e: Exception) {
+                        android.util.Log.e("AppDatabase", "Error initializing admin: ${e.message}", e)
                     }
                 }
                 

@@ -11,17 +11,32 @@ import com.awakencompany.data.AppDatabase
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
-        
-        // Initialize database
-        AppDatabase.getDatabase(this)
-        
-        // Navigate to login after 2 seconds
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        try {
+            setContentView(R.layout.activity_splash)
+            
+            // Initialize database in background
+            Thread {
+                try {
+                    AppDatabase.getDatabase(this)
+                } catch (e: Exception) {
+                    android.util.Log.e("SplashActivity", "Error initializing database: ${e.message}", e)
+                }
+            }.start()
+            
+            // Navigate to login after 2 seconds
+            Handler(Looper.getMainLooper()).postDelayed({
+                try {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } catch (e: Exception) {
+                    android.util.Log.e("SplashActivity", "Error navigating to login: ${e.message}", e)
+                }
+            }, 2000)
+        } catch (e: Exception) {
+            android.util.Log.e("SplashActivity", "Error in onCreate: ${e.message}", e)
             finish()
-        }, 2000)
+        }
     }
 }
 

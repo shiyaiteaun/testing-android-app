@@ -17,18 +17,23 @@ class AdminDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAdminDashboardBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        try {
+            binding = ActivityAdminDashboardBinding.inflate(layoutInflater)
+            setContentView(binding.root)
 
-        prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
+            prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
 
-        setupBottomNavigation()
-        
-        // Load default fragment after view is ready
-        if (savedInstanceState == null) {
-            binding.root.post {
-                loadFragment(AddItemFragment())
+            setupBottomNavigation()
+            
+            // Load default fragment after view is ready
+            if (savedInstanceState == null) {
+                binding.root.post {
+                    loadFragment(AddItemFragment())
+                }
             }
+        } catch (e: Exception) {
+            android.util.Log.e("AdminDashboard", "Error in onCreate: ${e.message}", e)
+            finish()
         }
     }
 

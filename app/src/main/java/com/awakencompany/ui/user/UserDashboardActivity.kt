@@ -17,16 +17,23 @@ class UserDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUserDashboardBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        try {
+            binding = ActivityUserDashboardBinding.inflate(layoutInflater)
+            setContentView(binding.root)
 
-        prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
+            prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
 
-        setupBottomNavigation()
-        
-        // Load default fragment
-        if (savedInstanceState == null) {
-            loadFragment(ProductsFragment())
+            setupBottomNavigation()
+            
+            // Load default fragment after view is ready
+            if (savedInstanceState == null) {
+                binding.root.post {
+                    loadFragment(ProductsFragment())
+                }
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error in onCreate: ${e.message}", e)
+            finish()
         }
     }
 
@@ -51,9 +58,13 @@ class UserDashboardActivity : AppCompatActivity() {
     }
 
     fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
+        try {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commitAllowingStateLoss()
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error loading fragment: ${e.message}", e)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

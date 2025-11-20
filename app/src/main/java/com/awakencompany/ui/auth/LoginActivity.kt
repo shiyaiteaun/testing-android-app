@@ -118,15 +118,29 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navigateToAdmin() {
-        val intent = Intent(this, AdminDashboardActivity::class.java)
-        startActivity(intent)
-        finish()
+        try {
+            val intent = Intent(this, AdminDashboardActivity::class.java)
+            startActivity(intent)
+            finish()
+        } catch (e: Exception) {
+            android.util.Log.e("LoginActivity", "Error navigating to admin: ${e.message}", e)
+            runOnUiThread {
+                Toast.makeText(this, "Error opening admin dashboard", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun navigateToUser() {
-        val intent = Intent(this, UserDashboardActivity::class.java)
-        startActivity(intent)
-        finish()
+        try {
+            val intent = Intent(this, UserDashboardActivity::class.java)
+            startActivity(intent)
+            finish()
+        } catch (e: Exception) {
+            android.util.Log.e("LoginActivity", "Error navigating to user: ${e.message}", e)
+            runOnUiThread {
+                Toast.makeText(this, "Error opening user dashboard", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
 
