@@ -65,16 +65,35 @@ jobs:
       
     - name: Check build status
       run: |
-        if grep -q "BUILD FAILED" build.log || [ "${{ env.BUILD_SUCCESS }}" != "true" ]; then
+        echo "=== Build Status Summary ==="
+        if grep -q "BUILD SUCCESSFUL" build.log; then
+          echo "✓ BUILD SUCCESSFUL"
+          echo "BUILD_FAILED=false" >> $GITHUB_ENV
+        elif grep -q "BUILD FAILED" build.log; then
+          echo "✗ BUILD FAILED"
           echo "BUILD_FAILED=true" >> $GITHUB_ENV
         else
-          echo "BUILD_FAILED=false" >> $GITHUB_ENV
+          echo "⚠ Build status unclear - checking exit code"
+          if [ "${{ env.BUILD_SUCCESS }}" != "true" ]; then
+            echo "✗ Build likely failed (exit code check)"
+            echo "BUILD_FAILED=true" >> $GITHUB_ENV
+          else
+            echo "? Build status unknown"
+            echo "BUILD_FAILED=false" >> $GITHUB_ENV
+          fi
         fi
+        echo ""
+        echo "BUILD_SUCCESS env: ${{ env.BUILD_SUCCESS }}"
+        echo "BUILD_FAILED env: $BUILD_FAILED"
       shell: bash
       
     - name: Show build errors
       if: env.BUILD_FAILED == 'true'
       run: |
+        echo "=========================================="
+        echo "⚠ BUILD FAILED - Showing Error Details"
+        echo "=========================================="
+        echo ""
         echo "=== Kotlin Compilation Errors ==="
         grep -B 5 -A 20 "e:" build.log | head -100 || echo "No 'e:' errors found"
         echo ""
@@ -90,7 +109,36 @@ jobs:
         echo "=== Full Build Log (Last 500 lines) ==="
         tail -500 build.log
       shell: bash
+    
+    - name: Show build success message
+      if: env.BUILD_FAILED != 'true' && env.BUILD_SUCCESS == 'true'
+      run: |
+        echo "=========================================="
+        echo "✓ BUILD SUCCESSFUL"
+        echo "=========================================="
+        echo "The build completed successfully."
+        echo "APK should be located at: app/build/outputs/apk/debug/app-debug.apk"
+      shell: bash
       
+    - name: Show build summary
+      run: |
+        echo "=== Build Summary ==="
+        echo "Build Success: ${{ env.BUILD_SUCCESS }}"
+        echo "Build Failed: ${{ env.BUILD_FAILED }}"
+        echo ""
+        if [ -f "build.log" ]; then
+          echo "=== Last 20 lines of build.log ==="
+          tail -20 build.log
+          echo ""
+          if grep -q "BUILD SUCCESSFUL" build.log; then
+            echo "✓ Build completed successfully according to build.log"
+          elif grep -q "BUILD FAILED" build.log; then
+            echo "✗ Build failed according to build.log"
+          fi
+        fi
+      shell: bash
+      continue-on-error: true
+    
     - name: Find and list APK files
       id: find_apk
       run: |
@@ -120,6 +168,11 @@ jobs:
           ls -lh app/build/outputs/apk/debug/app-debug.apk
         else
           echo "✗ Default APK path does not exist: app/build/outputs/apk/debug/app-debug.apk"
+          echo ""
+          echo "⚠ If build succeeded but APK not found, check:"
+          echo "  1. Build logs for errors"
+          echo "  2. app/build.gradle configuration"
+          echo "  3. Android SDK setup"
         fi
       shell: bash
       continue-on-error: true
