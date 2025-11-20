@@ -28,9 +28,18 @@ class AddItemFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAddItemBinding.inflate(inflater, container, false)
-        database = AppDatabase.getDatabase(requireContext())
-        return binding.root
+        try {
+            _binding = FragmentAddItemBinding.inflate(inflater, container, false)
+            database = AppDatabase.getDatabase(requireContext())
+            return binding.root
+        } catch (e: Exception) {
+            android.util.Log.e("AddItemFragment", "Error in onCreateView: ${e.message}", e)
+            // Return a simple error view if binding fails
+            val errorView = android.widget.TextView(requireContext())
+            errorView.text = "Error loading form. Please restart the app."
+            errorView.setPadding(32, 32, 32, 32)
+            return errorView
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -24,9 +24,11 @@ class AdminDashboardActivity : AppCompatActivity() {
 
         setupBottomNavigation()
         
-        // Load default fragment
+        // Load default fragment after view is ready
         if (savedInstanceState == null) {
-            loadFragment(AddItemFragment())
+            binding.root.post {
+                loadFragment(AddItemFragment())
+            }
         }
     }
 
@@ -62,10 +64,14 @@ class AdminDashboardActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
-            .commit()
+    fun loadFragment(fragment: Fragment) {
+        try {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commitAllowingStateLoss()
+        } catch (e: Exception) {
+            android.util.Log.e("AdminDashboard", "Error loading fragment: ${e.message}", e)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
