@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_financial_statement.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_financial_statement.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_activity_admin_dashboard.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/activity_admin_dashboard.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/menu_bottom_nav_admin.xml.flat",
+        "source": "com.awakencompany.app-main-56:/menu/bottom_nav_admin.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_remaining_stock.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_remaining_stock.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_activity_splash.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_order.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_order.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_incoming.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_incoming.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_user.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_user.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_cart.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_cart.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_user_management.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_user_management.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_sold.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_sold.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_activity_login.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_activity_user_dashboard.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/activity_user_dashboard.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_product.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_product.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_item_stock.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/item_stock.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_orders.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_orders.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_dialog_customer_info.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/dialog_customer_info.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_add_item.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_add_item.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/menu_bottom_nav_user.xml.flat",
+        "source": "com.awakencompany.app-main-56:/menu/bottom_nav_user.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_incoming_items.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_incoming_items.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_sold_items.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_sold_items.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_products.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_products.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/menu_admin_menu.xml.flat",
+        "source": "com.awakencompany.app-main-56:/menu/admin_menu.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/menu_user_menu.xml.flat",
+        "source": "com.awakencompany.app-main-56:/menu/user_menu.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.awakencompany.app-main-56:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_dialog_add_user.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/dialog_add_user.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-debug-54:/layout_fragment_cart.xml.flat",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_cart.xml"
+    }
+]

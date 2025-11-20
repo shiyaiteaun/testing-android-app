@@ -18,21 +18,34 @@ class UserDashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
+            android.util.Log.d("UserDashboard", "onCreate started")
             binding = ActivityUserDashboardBinding.inflate(layoutInflater)
             setContentView(binding.root)
+            android.util.Log.d("UserDashboard", "View set")
 
             prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
+            android.util.Log.d("UserDashboard", "Preferences initialized")
 
             setupBottomNavigation()
+            android.util.Log.d("UserDashboard", "Bottom navigation setup")
             
             // Load default fragment after view is ready
             if (savedInstanceState == null) {
+                android.util.Log.d("UserDashboard", "Loading default fragment")
                 binding.root.post {
-                    loadFragment(ProductsFragment())
+                    try {
+                        android.util.Log.d("UserDashboard", "Posting fragment load")
+                        loadFragment(ProductsFragment())
+                        android.util.Log.d("UserDashboard", "Fragment loaded")
+                    } catch (e: Exception) {
+                        android.util.Log.e("UserDashboard", "Error loading fragment in post: ${e.message}", e)
+                    }
                 }
             }
+            android.util.Log.d("UserDashboard", "onCreate completed")
         } catch (e: Exception) {
             android.util.Log.e("UserDashboard", "Error in onCreate: ${e.message}", e)
+            e.printStackTrace()
             finish()
         }
     }

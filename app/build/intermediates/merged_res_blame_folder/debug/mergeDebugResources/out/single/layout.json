@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_orders.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_orders.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_incoming_items.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_incoming_items.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_sold.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_sold.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_user_management.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_user_management.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_sold_items.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_sold_items.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_products.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_products.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_user.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_user.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_incoming.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_incoming.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/dialog_customer_info.xml",
+        "source": "com.awakencompany.app-main-56:/layout/dialog_customer_info.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_remaining_stock.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_remaining_stock.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/activity_login.xml",
+        "source": "com.awakencompany.app-main-56:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/activity_admin_dashboard.xml",
+        "source": "com.awakencompany.app-main-56:/layout/activity_admin_dashboard.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/activity_user_dashboard.xml",
+        "source": "com.awakencompany.app-main-56:/layout/activity_user_dashboard.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/dialog_add_user.xml",
+        "source": "com.awakencompany.app-main-56:/layout/dialog_add_user.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/activity_splash.xml",
+        "source": "com.awakencompany.app-main-56:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_cart.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_cart.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_financial_statement.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_financial_statement.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/fragment_add_item.xml",
+        "source": "com.awakencompany.app-main-56:/layout/fragment_add_item.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_order.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_order.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_cart.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_cart.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_stock.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_stock.xml"
+    },
+    {
+        "merged": "com.awakencompany.app-mergeDebugResources-53:/layout/item_product.xml",
+        "source": "com.awakencompany.app-main-56:/layout/item_product.xml"
+    }
+]

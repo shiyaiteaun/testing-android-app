@@ -60,19 +60,29 @@ class LoginActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            val admin = database.adminDao().getAdminByUsername(username)
-            if (admin != null && verifyPassword(password, admin.password)) {
-                // Save login state
-                prefs.edit().apply {
-                    putBoolean("admin_logged_in", true)
-                    putInt("admin_id", admin.adminId)
-                    putString("admin_username", admin.username)
-                    apply()
+            try {
+                val admin = database.adminDao().getAdminByUsername(username)
+                if (admin != null && verifyPassword(password, admin.password)) {
+                    // Save login state
+                    prefs.edit().apply {
+                        putBoolean("admin_logged_in", true)
+                        putInt("admin_id", admin.adminId)
+                        putString("admin_username", admin.username)
+                        apply()
+                    }
+                    // Navigate on UI thread
+                    runOnUiThread {
+                        navigateToAdmin()
+                    }
+                } else {
+                    runOnUiThread {
+                        Toast.makeText(this@LoginActivity, "Invalid credentials", Toast.LENGTH_SHORT).show()
+                    }
                 }
-                navigateToAdmin()
-            } else {
+            } catch (e: Exception) {
+                android.util.Log.e("LoginActivity", "Error in loginAsAdmin: ${e.message}", e)
                 runOnUiThread {
-                    Toast.makeText(this@LoginActivity, "Invalid credentials", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity, "Login error: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -88,19 +98,29 @@ class LoginActivity : AppCompatActivity() {
         }
 
         lifecycleScope.launch {
-            val user = database.userDao().getUserByUsername(username)
-            if (user != null && user.status == "active" && verifyPassword(password, user.password)) {
-                // Save login state
-                prefs.edit().apply {
-                    putBoolean("user_logged_in", true)
-                    putInt("user_id", user.userId)
-                    putString("user_username", user.username)
-                    apply()
+            try {
+                val user = database.userDao().getUserByUsername(username)
+                if (user != null && user.status == "active" && verifyPassword(password, user.password)) {
+                    // Save login state
+                    prefs.edit().apply {
+                        putBoolean("user_logged_in", true)
+                        putInt("user_id", user.userId)
+                        putString("user_username", user.username)
+                        apply()
+                    }
+                    // Navigate on UI thread
+                    runOnUiThread {
+                        navigateToUser()
+                    }
+                } else {
+                    runOnUiThread {
+                        Toast.makeText(this@LoginActivity, "Invalid credentials or inactive account", Toast.LENGTH_SHORT).show()
+                    }
                 }
-                navigateToUser()
-            } else {
+            } catch (e: Exception) {
+                android.util.Log.e("LoginActivity", "Error in loginAsUser: ${e.message}", e)
                 runOnUiThread {
-                    Toast.makeText(this@LoginActivity, "Invalid credentials or inactive account", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity, "Login error: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -119,27 +139,31 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navigateToAdmin() {
         try {
+            android.util.Log.d("LoginActivity", "Navigating to AdminDashboardActivity")
             val intent = Intent(this, AdminDashboardActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+            android.util.Log.d("LoginActivity", "AdminDashboardActivity started, finishing LoginActivity")
             finish()
         } catch (e: Exception) {
             android.util.Log.e("LoginActivity", "Error navigating to admin: ${e.message}", e)
-            runOnUiThread {
-                Toast.makeText(this, "Error opening admin dashboard", Toast.LENGTH_SHORT).show()
-            }
+            e.printStackTrace()
+            Toast.makeText(this, "Error opening admin dashboard: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 
     private fun navigateToUser() {
         try {
+            android.util.Log.d("LoginActivity", "Navigating to UserDashboardActivity")
             val intent = Intent(this, UserDashboardActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+            android.util.Log.d("LoginActivity", "UserDashboardActivity started, finishing LoginActivity")
             finish()
         } catch (e: Exception) {
             android.util.Log.e("LoginActivity", "Error navigating to user: ${e.message}", e)
-            runOnUiThread {
-                Toast.makeText(this, "Error opening user dashboard", Toast.LENGTH_SHORT).show()
-            }
+            e.printStackTrace()
+            Toast.makeText(this, "Error opening user dashboard: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 }

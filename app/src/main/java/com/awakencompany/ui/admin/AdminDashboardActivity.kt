@@ -18,21 +18,34 @@ class AdminDashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
+            android.util.Log.d("AdminDashboard", "onCreate started")
             binding = ActivityAdminDashboardBinding.inflate(layoutInflater)
             setContentView(binding.root)
+            android.util.Log.d("AdminDashboard", "View set")
 
             prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
+            android.util.Log.d("AdminDashboard", "Preferences initialized")
 
             setupBottomNavigation()
+            android.util.Log.d("AdminDashboard", "Bottom navigation setup")
             
             // Load default fragment after view is ready
             if (savedInstanceState == null) {
+                android.util.Log.d("AdminDashboard", "Loading default fragment")
                 binding.root.post {
-                    loadFragment(AddItemFragment())
+                    try {
+                        android.util.Log.d("AdminDashboard", "Posting fragment load")
+                        loadFragment(AddItemFragment())
+                        android.util.Log.d("AdminDashboard", "Fragment loaded")
+                    } catch (e: Exception) {
+                        android.util.Log.e("AdminDashboard", "Error loading fragment in post: ${e.message}", e)
+                    }
                 }
             }
+            android.util.Log.d("AdminDashboard", "onCreate completed")
         } catch (e: Exception) {
             android.util.Log.e("AdminDashboard", "Error in onCreate: ${e.message}", e)
+            e.printStackTrace()
             finish()
         }
     }
