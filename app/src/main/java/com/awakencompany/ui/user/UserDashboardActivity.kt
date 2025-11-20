@@ -17,57 +17,94 @@ class UserDashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        android.util.Log.d("UserDashboard", "onCreate started")
+        
+        // Step 1: Inflate binding
         try {
-            android.util.Log.d("UserDashboard", "onCreate started")
             binding = ActivityUserDashboardBinding.inflate(layoutInflater)
+            android.util.Log.d("UserDashboard", "Binding inflated successfully")
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "CRITICAL: Error inflating binding: ${e.message}", e)
+            e.printStackTrace()
+            showErrorAndExit("Error loading dashboard layout")
+            return
+        }
+        
+        // Step 2: Set content view
+        try {
             setContentView(binding.root)
-            android.util.Log.d("UserDashboard", "View set")
+            android.util.Log.d("UserDashboard", "Content view set successfully")
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "CRITICAL: Error setting content view: ${e.message}", e)
+            e.printStackTrace()
+            showErrorAndExit("Error setting up dashboard view")
+            return
+        }
 
+        // Step 3: Initialize preferences
+        try {
             prefs = getSharedPreferences("AwakenPrefs", MODE_PRIVATE)
             android.util.Log.d("UserDashboard", "Preferences initialized")
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error initializing preferences: ${e.message}", e)
+            // Continue - preferences are not critical
+        }
 
+        // Step 4: Setup bottom navigation
+        try {
             setupBottomNavigation()
-            android.util.Log.d("UserDashboard", "Bottom navigation setup")
-            
-            // Load default fragment after view is ready
-            if (savedInstanceState == null) {
-                android.util.Log.d("UserDashboard", "Loading default fragment")
+            android.util.Log.d("UserDashboard", "Bottom navigation setup completed")
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "CRITICAL: Error setting up bottom navigation: ${e.message}", e)
+            e.printStackTrace()
+            showErrorAndExit("Error setting up navigation")
+            return
+        }
+        
+        // Step 5: Load default fragment
+        if (savedInstanceState == null) {
+            try {
+                android.util.Log.d("UserDashboard", "Scheduling fragment load")
                 binding.root.post {
                     try {
-                        android.util.Log.d("UserDashboard", "Posting fragment load")
+                        android.util.Log.d("UserDashboard", "Loading default fragment")
                         loadFragment(ProductsFragment())
-                        android.util.Log.d("UserDashboard", "Fragment loaded")
+                        android.util.Log.d("UserDashboard", "Fragment loaded successfully")
                     } catch (e: Exception) {
-                        android.util.Log.e("UserDashboard", "Error loading fragment in post: ${e.message}", e)
+                        android.util.Log.e("UserDashboard", "Error loading fragment: ${e.message}", e)
+                        e.printStackTrace()
                     }
                 }
+            } catch (e: Exception) {
+                android.util.Log.e("UserDashboard", "Error scheduling fragment load: ${e.message}", e)
+                // Continue - fragment can be loaded later
             }
-            android.util.Log.d("UserDashboard", "onCreate completed")
-        } catch (e: Exception) {
-            android.util.Log.e("UserDashboard", "Error in onCreate: ${e.message}", e)
-            e.printStackTrace()
-            // Show error and navigate back to login instead of just finishing
-            try {
-                android.widget.Toast.makeText(this, "Error loading dashboard. Please try again.", android.widget.Toast.LENGTH_LONG).show()
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-            } catch (e2: Exception) {
-                android.util.Log.e("UserDashboard", "Error showing error message: ${e2.message}", e2)
-            }
-            finish()
         }
+        
+        android.util.Log.d("UserDashboard", "onCreate completed successfully")
+    }
+    
+    private fun showErrorAndExit(message: String) {
+        try {
+            android.widget.Toast.makeText(this, message, android.widget.Toast.LENGTH_LONG).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error showing error message: ${e.message}", e)
+        }
+        finish()
     }
 
     private fun setupBottomNavigation() {
         try {
+            android.util.Log.d("UserDashboard", "Setting up bottom navigation")
             val bottomNav = binding.bottomNavigation
-            if (bottomNav == null) {
-                android.util.Log.e("UserDashboard", "Bottom navigation is null!")
-                return
-            }
+            android.util.Log.d("UserDashboard", "Bottom navigation view obtained: ${bottomNav != null}")
+            
             bottomNav.setOnItemSelectedListener { item ->
                 try {
+                    android.util.Log.d("UserDashboard", "Navigation item selected: ${item.itemId}")
                     when (item.itemId) {
                         R.id.nav_products -> {
                             loadFragment(ProductsFragment())
@@ -81,15 +118,22 @@ class UserDashboardActivity : AppCompatActivity() {
                             loadFragment(OrdersFragment())
                             true
                         }
-                        else -> false
+                        else -> {
+                            android.util.Log.w("UserDashboard", "Unknown navigation item: ${item.itemId}")
+                            false
+                        }
                     }
                 } catch (e: Exception) {
                     android.util.Log.e("UserDashboard", "Error in navigation listener: ${e.message}", e)
+                    e.printStackTrace()
                     false
                 }
             }
+            android.util.Log.d("UserDashboard", "Bottom navigation listener set successfully")
         } catch (e: Exception) {
-            android.util.Log.e("UserDashboard", "Error setting up bottom navigation: ${e.message}", e)
+            android.util.Log.e("UserDashboard", "CRITICAL: Error setting up bottom navigation: ${e.message}", e)
+            e.printStackTrace()
+            throw e // Re-throw to be caught by onCreate
         }
     }
 
@@ -104,8 +148,14 @@ class UserDashboardActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.user_menu, menu)
-        return true
+        return try {
+            menuInflater.inflate(R.menu.user_menu, menu)
+            android.util.Log.d("UserDashboard", "Options menu created")
+            true
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error creating options menu: ${e.message}", e)
+            false
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
