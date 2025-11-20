@@ -43,6 +43,14 @@ git push -u origin main
 3. **Artifacts** section မှာ **"app-debug"** ကို click လုပ်ပါ
 4. APK file ကို download လုပ်ပါ
 
+### APK Artifact မတွေ့ရင် (Troubleshooting)
+
+APK artifact မတွေ့ရင်:
+1. Workflow run page မှာ **"build"** job ကို click လုပ်ပါ
+2. **"Find and list APK files"** step logs ကို စစ်ဆေးပါ - APK file ရှိရင် path ကို logs မှာ မြင်ရမယ်
+3. **"Build APK"** step logs ကို စစ်ဆေးပါ - build အောင်မြင်လား စစ်ပါ
+4. Build အောင်မြင်ရင် workflow ကို ပြန် run လုပ်ပါ (သို့မဟုတ် code ကို push ပြန်လုပ်ပါ)
+
 ## အလိုအလျောက် Build
 
 Code ကို push လုပ်တိုင်း အလိုအလျောက် build လုပ်ပါမယ်။ APK file ကို Artifacts ကနေ download လုပ်လို့ရပါတယ်။
