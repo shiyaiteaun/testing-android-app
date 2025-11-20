@@ -144,7 +144,8 @@ class UserManagementFragment : Fragment() {
                     fullName = fullName,
                     email = if (email.isEmpty()) null else email,
                     phone = if (phone.isEmpty()) null else phone,
-                    status = "active"
+                    status = "active",
+                    createdBy = null // TODO: Get current admin ID if needed
                 )
 
                 database.userDao().insertUser(user)

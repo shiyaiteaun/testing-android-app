@@ -67,11 +67,6 @@ class ProductsFragment : Fragment() {
                 filterProducts()
             }
         })
-
-        binding.btnSearch.setOnClickListener {
-            searchTerm = binding.etSearch.text.toString().trim()
-            filterProducts()
-        }
     }
 
     private fun loadCategories() {

@@ -51,7 +51,9 @@ abstract class AppDatabase : RoomDatabase() {
                 
                 // Initialize default admin account
                 Executors.newSingleThreadExecutor().execute {
-                    initializeDefaultAdmin(instance.adminDao())
+                    kotlinx.coroutines.runBlocking {
+                        initializeDefaultAdmin(instance.adminDao())
+                    }
                 }
                 
                 INSTANCE = instance
@@ -59,7 +61,7 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
-        private fun initializeDefaultAdmin(adminDao: AdminDao) {
+        private suspend fun initializeDefaultAdmin(adminDao: AdminDao) {
             val defaultAdmin = adminDao.getAdminByUsername("shiyai")
             if (defaultAdmin == null) {
                 // Default password: Shiyai2025@

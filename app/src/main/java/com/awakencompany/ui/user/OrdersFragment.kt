@@ -79,6 +79,11 @@ class OrdersFragment : Fragment() {
     private fun showOrderDetails(order: Order) {
         lifecycleScope.launch {
             val orderItems = database.orderItemDao().getOrderItemsByOrderId(order.orderId)
+            // Get all products for order items
+            val products = orderItems.map { item ->
+                item.itemCode to database.productDao().getProductByCode(item.itemCode)
+            }.toMap()
+            
             requireActivity().runOnUiThread {
                 val details = buildString {
                     append("Order #${order.orderId}\n")
@@ -88,7 +93,7 @@ class OrdersFragment : Fragment() {
                     append("Payment: ${order.paymentMethod}\n\n")
                     append("Items:\n")
                     orderItems.forEach { item ->
-                        val product = database.productDao().getProductByCode(item.itemCode)
+                        val product = products[item.itemCode]
                         append("• ${product?.itemName ?: item.itemCode} x${item.quantity} = ${formatCurrency(item.total)} Ks\n")
                     }
                     append("\nTotal: ${formatCurrency(order.grandTotal)} Ks")

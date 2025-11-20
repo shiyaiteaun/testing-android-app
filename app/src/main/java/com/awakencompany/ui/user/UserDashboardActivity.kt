@@ -12,7 +12,7 @@ import com.awakencompany.databinding.ActivityUserDashboardBinding
 import com.awakencompany.ui.auth.LoginActivity
 
 class UserDashboardActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityUserDashboardBinding
+    lateinit var binding: ActivityUserDashboardBinding
     private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {

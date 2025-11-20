@@ -13,7 +13,7 @@ object CartManager {
         val unitPrice: Double,
         var quantity: Int,
         val itemPhoto: String?,
-        val maxQuantity: Int // Current stock available
+        var maxQuantity: Int // Current stock available
     ) {
         fun getTotal(): Double = quantity * unitPrice
     }
