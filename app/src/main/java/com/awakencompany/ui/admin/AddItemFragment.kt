@@ -29,15 +29,29 @@ class AddItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         try {
+            android.util.Log.d("AddItemFragment", "onCreateView started")
             _binding = FragmentAddItemBinding.inflate(inflater, container, false)
-            database = AppDatabase.getDatabase(requireContext())
+            android.util.Log.d("AddItemFragment", "Binding inflated")
+            
+            // Initialize database safely
+            try {
+                database = AppDatabase.getDatabase(requireContext())
+                android.util.Log.d("AddItemFragment", "Database initialized")
+            } catch (dbError: Exception) {
+                android.util.Log.e("AddItemFragment", "Database initialization error: ${dbError.message}", dbError)
+                // Continue anyway - database might be initialized later
+            }
+            
+            android.util.Log.d("AddItemFragment", "onCreateView completed successfully")
             return binding.root
         } catch (e: Exception) {
             android.util.Log.e("AddItemFragment", "Error in onCreateView: ${e.message}", e)
+            e.printStackTrace()
             // Return a simple error view if binding fails
             val errorView = android.widget.TextView(requireContext())
             errorView.text = "Error loading form. Please restart the app."
             errorView.setPadding(32, 32, 32, 32)
+            errorView.textSize = 16f
             return errorView
         }
     }

@@ -46,39 +46,62 @@ class AdminDashboardActivity : AppCompatActivity() {
         } catch (e: Exception) {
             android.util.Log.e("AdminDashboard", "Error in onCreate: ${e.message}", e)
             e.printStackTrace()
+            // Show error and navigate back to login instead of just finishing
+            try {
+                android.widget.Toast.makeText(this, "Error loading dashboard. Please try again.", android.widget.Toast.LENGTH_LONG).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            } catch (e2: Exception) {
+                android.util.Log.e("AdminDashboard", "Error showing error message: ${e2.message}", e2)
+            }
             finish()
         }
     }
 
     private fun setupBottomNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_add_item -> {
-                    loadFragment(AddItemFragment())
-                    true
-                }
-                R.id.nav_incoming -> {
-                    loadFragment(IncomingItemsFragment())
-                    true
-                }
-                R.id.nav_sold -> {
-                    loadFragment(SoldItemsFragment())
-                    true
-                }
-                R.id.nav_stock -> {
-                    loadFragment(RemainingStockFragment())
-                    true
-                }
-                R.id.nav_financial -> {
-                    loadFragment(FinancialStatementFragment())
-                    true
-                }
-                R.id.nav_users -> {
-                    loadFragment(UserManagementFragment())
-                    true
-                }
-                else -> false
+        try {
+            val bottomNav = binding.bottomNavigation
+            if (bottomNav == null) {
+                android.util.Log.e("AdminDashboard", "Bottom navigation is null!")
+                return
             }
+            bottomNav.setOnItemSelectedListener { item ->
+                try {
+                    when (item.itemId) {
+                        R.id.nav_add_item -> {
+                            loadFragment(AddItemFragment())
+                            true
+                        }
+                        R.id.nav_incoming -> {
+                            loadFragment(IncomingItemsFragment())
+                            true
+                        }
+                        R.id.nav_sold -> {
+                            loadFragment(SoldItemsFragment())
+                            true
+                        }
+                        R.id.nav_stock -> {
+                            loadFragment(RemainingStockFragment())
+                            true
+                        }
+                        R.id.nav_financial -> {
+                            loadFragment(FinancialStatementFragment())
+                            true
+                        }
+                        R.id.nav_users -> {
+                            loadFragment(UserManagementFragment())
+                            true
+                        }
+                        else -> false
+                    }
+                } catch (e: Exception) {
+                    android.util.Log.e("AdminDashboard", "Error in navigation listener: ${e.message}", e)
+                    false
+                }
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("AdminDashboard", "Error setting up bottom navigation: ${e.message}", e)
         }
     }
 

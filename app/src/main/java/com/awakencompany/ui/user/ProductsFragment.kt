@@ -32,9 +32,32 @@ class ProductsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProductsBinding.inflate(inflater, container, false)
-        database = AppDatabase.getDatabase(requireContext())
-        return binding.root
+        try {
+            android.util.Log.d("ProductsFragment", "onCreateView started")
+            _binding = FragmentProductsBinding.inflate(inflater, container, false)
+            android.util.Log.d("ProductsFragment", "Binding inflated")
+            
+            // Initialize database safely
+            try {
+                database = AppDatabase.getDatabase(requireContext())
+                android.util.Log.d("ProductsFragment", "Database initialized")
+            } catch (dbError: Exception) {
+                android.util.Log.e("ProductsFragment", "Database initialization error: ${dbError.message}", dbError)
+                // Continue anyway - database might be initialized later
+            }
+            
+            android.util.Log.d("ProductsFragment", "onCreateView completed successfully")
+            return binding.root
+        } catch (e: Exception) {
+            android.util.Log.e("ProductsFragment", "Error in onCreateView: ${e.message}", e)
+            e.printStackTrace()
+            // Return a simple error view if binding fails
+            val errorView = android.widget.TextView(requireContext())
+            errorView.text = "Error loading products. Please restart the app."
+            errorView.setPadding(32, 32, 32, 32)
+            errorView.textSize = 16f
+            return errorView
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

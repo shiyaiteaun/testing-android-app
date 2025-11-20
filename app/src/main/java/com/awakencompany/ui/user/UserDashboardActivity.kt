@@ -46,27 +46,50 @@ class UserDashboardActivity : AppCompatActivity() {
         } catch (e: Exception) {
             android.util.Log.e("UserDashboard", "Error in onCreate: ${e.message}", e)
             e.printStackTrace()
+            // Show error and navigate back to login instead of just finishing
+            try {
+                android.widget.Toast.makeText(this, "Error loading dashboard. Please try again.", android.widget.Toast.LENGTH_LONG).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            } catch (e2: Exception) {
+                android.util.Log.e("UserDashboard", "Error showing error message: ${e2.message}", e2)
+            }
             finish()
         }
     }
 
     private fun setupBottomNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.nav_products -> {
-                    loadFragment(ProductsFragment())
-                    true
-                }
-                R.id.nav_cart -> {
-                    loadFragment(CartFragment())
-                    true
-                }
-                R.id.nav_orders -> {
-                    loadFragment(OrdersFragment())
-                    true
-                }
-                else -> false
+        try {
+            val bottomNav = binding.bottomNavigation
+            if (bottomNav == null) {
+                android.util.Log.e("UserDashboard", "Bottom navigation is null!")
+                return
             }
+            bottomNav.setOnItemSelectedListener { item ->
+                try {
+                    when (item.itemId) {
+                        R.id.nav_products -> {
+                            loadFragment(ProductsFragment())
+                            true
+                        }
+                        R.id.nav_cart -> {
+                            loadFragment(CartFragment())
+                            true
+                        }
+                        R.id.nav_orders -> {
+                            loadFragment(OrdersFragment())
+                            true
+                        }
+                        else -> false
+                    }
+                } catch (e: Exception) {
+                    android.util.Log.e("UserDashboard", "Error in navigation listener: ${e.message}", e)
+                    false
+                }
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("UserDashboard", "Error setting up bottom navigation: ${e.message}", e)
         }
     }
 
