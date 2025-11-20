@@ -21,12 +21,43 @@ class UserDashboardActivity : AppCompatActivity() {
         
         // Step 1: Inflate binding
         try {
+            android.util.Log.d("UserDashboard", "Attempting to inflate binding...")
+            android.util.Log.d("UserDashboard", "LayoutInflater: ${layoutInflater != null}")
+            
+            // Check if binding class exists
+            try {
+                val bindingClass = ActivityUserDashboardBinding::class.java
+                android.util.Log.d("UserDashboard", "Binding class found: ${bindingClass.name}")
+            } catch (e: ClassNotFoundException) {
+                android.util.Log.e("UserDashboard", "CRITICAL: Binding class not found! Need to rebuild project.")
+                showErrorAndExit("Binding class not found. Please rebuild the project.")
+                return
+            }
+            
             binding = ActivityUserDashboardBinding.inflate(layoutInflater)
             android.util.Log.d("UserDashboard", "Binding inflated successfully")
+            android.util.Log.d("UserDashboard", "Binding root: ${binding.root != null}")
+        } catch (e: ClassNotFoundException) {
+            android.util.Log.e("UserDashboard", "CRITICAL: Binding class not found: ${e.message}", e)
+            e.printStackTrace()
+            showErrorAndExit("Binding class not found. Please rebuild the project in Android Studio.")
+            return
+        } catch (e: android.view.InflateException) {
+            android.util.Log.e("UserDashboard", "CRITICAL: Layout inflation error: ${e.message}", e)
+            e.printStackTrace()
+            // Log the cause if available
+            e.cause?.let { cause ->
+                android.util.Log.e("UserDashboard", "Cause: ${cause.message}", cause)
+            }
+            showErrorAndExit("Layout error: ${e.message}. Please check layout files.")
+            return
         } catch (e: Exception) {
             android.util.Log.e("UserDashboard", "CRITICAL: Error inflating binding: ${e.message}", e)
             e.printStackTrace()
-            showErrorAndExit("Error loading dashboard layout")
+            e.cause?.let { cause ->
+                android.util.Log.e("UserDashboard", "Cause: ${cause.message}", cause)
+            }
+            showErrorAndExit("Error loading dashboard layout: ${e.message}")
             return
         }
         
