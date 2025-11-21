@@ -157,12 +157,10 @@ class CartFragment : Fragment() {
     private fun showPaymentDialog(customerName: String, customerAddress: String, customerPhone: String) {
         var selectedPaymentMethod = "cash"
         val paymentOptions = arrayOf("Cash", "Online Payment")
-        var selectedIndex = 0
 
         AlertDialog.Builder(requireContext())
             .setTitle("Payment Method")
             .setSingleChoiceItems(paymentOptions, 0) { _, which ->
-                selectedIndex = which
                 selectedPaymentMethod = if (which == 0) "cash" else "online"
             }
             .setPositiveButton("Confirm Order") { _, _ ->

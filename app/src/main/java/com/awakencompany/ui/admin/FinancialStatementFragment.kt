@@ -93,7 +93,6 @@ class FinancialStatementFragment : Fragment() {
                     Quadruple(sales, transactions, items, avg)
                 }
                 "month" -> {
-                    val calendar = Calendar.getInstance()
                     val monthStart = Calendar.getInstance().apply {
                         set(Calendar.DAY_OF_MONTH, 1)
                         set(Calendar.HOUR_OF_DAY, 0)
@@ -108,7 +107,6 @@ class FinancialStatementFragment : Fragment() {
                     Quadruple(sales, transactions, items, avg)
                 }
                 "year" -> {
-                    val calendar = Calendar.getInstance()
                     val yearStart = Calendar.getInstance().apply {
                         set(Calendar.MONTH, 0)
                         set(Calendar.DAY_OF_MONTH, 1)

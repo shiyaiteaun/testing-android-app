@@ -97,7 +97,7 @@ class IncomingItemsFragment : Fragment() {
         }
     }
 
-    private fun showEditDialog(item: IncomingItem) {
+    private fun showEditDialog(@Suppress("UNUSED_PARAMETER") item: IncomingItem) {
         // Edit functionality - can be implemented later
         Toast.makeText(requireContext(), "Edit functionality coming soon", Toast.LENGTH_SHORT).show()
     }

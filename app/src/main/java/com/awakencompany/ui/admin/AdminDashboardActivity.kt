@@ -22,7 +22,6 @@ class AdminDashboardActivity : AppCompatActivity() {
         // Step 1: Inflate binding
         try {
             android.util.Log.d("AdminDashboard", "Attempting to inflate binding...")
-            android.util.Log.d("AdminDashboard", "LayoutInflater: ${layoutInflater != null}")
             
             // Check if binding class exists
             try {
@@ -36,7 +35,6 @@ class AdminDashboardActivity : AppCompatActivity() {
             
             binding = ActivityAdminDashboardBinding.inflate(layoutInflater)
             android.util.Log.d("AdminDashboard", "Binding inflated successfully")
-            android.util.Log.d("AdminDashboard", "Binding root: ${binding.root != null}")
         } catch (e: ClassNotFoundException) {
             android.util.Log.e("AdminDashboard", "CRITICAL: Binding class not found: ${e.message}", e)
             e.printStackTrace()
@@ -131,7 +129,6 @@ class AdminDashboardActivity : AppCompatActivity() {
         try {
             android.util.Log.d("AdminDashboard", "Setting up bottom navigation")
             val bottomNav = binding.bottomNavigation
-            android.util.Log.d("AdminDashboard", "Bottom navigation view obtained: ${bottomNav != null}")
             
             bottomNav.setOnItemSelectedListener { item ->
                 try {

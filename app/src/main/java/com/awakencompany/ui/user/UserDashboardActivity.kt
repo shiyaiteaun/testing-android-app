@@ -22,7 +22,6 @@ class UserDashboardActivity : AppCompatActivity() {
         // Step 1: Inflate binding
         try {
             android.util.Log.d("UserDashboard", "Attempting to inflate binding...")
-            android.util.Log.d("UserDashboard", "LayoutInflater: ${layoutInflater != null}")
             
             // Check if binding class exists
             try {
@@ -36,7 +35,6 @@ class UserDashboardActivity : AppCompatActivity() {
             
             binding = ActivityUserDashboardBinding.inflate(layoutInflater)
             android.util.Log.d("UserDashboard", "Binding inflated successfully")
-            android.util.Log.d("UserDashboard", "Binding root: ${binding.root != null}")
         } catch (e: ClassNotFoundException) {
             android.util.Log.e("UserDashboard", "CRITICAL: Binding class not found: ${e.message}", e)
             e.printStackTrace()

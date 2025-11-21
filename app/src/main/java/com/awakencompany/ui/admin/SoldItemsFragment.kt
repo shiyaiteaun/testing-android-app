@@ -145,8 +145,6 @@ class SoldItemsFragment : Fragment() {
                     )
                 }
                 "month" -> {
-                    val calendar = Calendar.getInstance()
-                    val yearMonth = SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date(calendar.timeInMillis))
                     val monthStart = Calendar.getInstance().apply {
                         set(Calendar.DAY_OF_MONTH, 1)
                         set(Calendar.HOUR_OF_DAY, 0)
@@ -161,7 +159,6 @@ class SoldItemsFragment : Fragment() {
                     )
                 }
                 "year" -> {
-                    val calendar = Calendar.getInstance()
                     val yearStart = Calendar.getInstance().apply {
                         set(Calendar.MONTH, 0)
                         set(Calendar.DAY_OF_MONTH, 1)
