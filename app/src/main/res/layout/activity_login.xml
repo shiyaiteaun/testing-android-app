@@ -36,6 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintWidth_max="600dp"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -56,6 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilUsername"
+        app:layout_constraintWidth_max="600dp"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -74,7 +76,8 @@
         android:text="@string/login_as_admin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilPassword" />
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        app:layout_constraintWidth_max="600dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnUserLogin"
@@ -85,7 +88,8 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAdminLogin" />
+        app:layout_constraintTop_toBottomOf="@id/btnAdminLogin"
+        app:layout_constraintWidth_max="600dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
