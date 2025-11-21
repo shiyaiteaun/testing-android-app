@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -61,13 +60,13 @@ public final class ActivitySplashBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.ivLogo;
-      ImageView ivLogo = ViewBindings.findChildViewById(rootView, id);
+      ImageView ivLogo = rootView.findViewById(id);
       if (ivLogo == null) {
         break missingId;
       }
 
       id = R.id.tvAppName;
-      TextView tvAppName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvAppName = rootView.findViewById(id);
       if (tvAppName == null) {
         break missingId;
       }

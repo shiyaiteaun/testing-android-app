@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
@@ -77,31 +76,31 @@ public final class FragmentCartBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnCheckout;
-      MaterialButton btnCheckout = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnCheckout = rootView.findViewById(id);
       if (btnCheckout == null) {
         break missingId;
       }
 
       id = R.id.emptyCartView;
-      LinearLayout emptyCartView = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout emptyCartView = rootView.findViewById(id);
       if (emptyCartView == null) {
         break missingId;
       }
 
       id = R.id.recyclerViewCart;
-      RecyclerView recyclerViewCart = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView recyclerViewCart = rootView.findViewById(id);
       if (recyclerViewCart == null) {
         break missingId;
       }
 
       id = R.id.tvTitle;
-      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTitle = rootView.findViewById(id);
       if (tvTitle == null) {
         break missingId;
       }
 
       id = R.id.tvTotal;
-      TextView tvTotal = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotal = rootView.findViewById(id);
       if (tvTotal == null) {
         break missingId;
       }

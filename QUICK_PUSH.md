@@ -1,50 +1,35 @@
-# 🚀 Quick GitHub Push Commands
+# ⚡ Quick Push Guide
 
-## 📋 Repository
-`git@github.com:shiyaiteaun/android-app-testing.git`
+## 🚀 Push All Changes to GitHub (3 Steps)
 
----
-
-## ✅ Quick Commands
-
-```cmd
-cd android_app
-
-# Add all changes
+### Step 1: Add All Changes
+```powershell
 git add .
+```
 
-# Commit
-git commit -m "Your commit message"
+### Step 2: Commit
+```powershell
+git commit -m "Fix layout errors, update dependencies, and fix GitHub Actions"
+```
 
-# Push
+### Step 3: Push
+```powershell
 git push origin main
 ```
 
----
+## 📋 Complete Command (Copy & Paste)
 
-## 📝 Example
-
-```cmd
-cd android_app
+```powershell
 git add .
-git commit -m "Update Android app"
+git commit -m "Fix layout errors and update GitHub Actions workflow"
 git push origin main
 ```
 
----
+## ⚠️ Note
+- Build files (`app/build/`) တွေက automatically ignore ဖြစ်သွားပါမယ် (`.gitignore` ထဲမှာ ရှိပြီးသား)
+- Source code files နဲ့ documentation files တွေက push ဖြစ်သွားပါမယ်
 
-## 🔐 SSH Key Check
-
-**Test SSH connection:**
-```cmd
-ssh -T git@github.com
-```
-
-**If "Permission denied":**
-- SSH key setup လုပ်ရမယ်
-- OR use HTTPS: `git remote set-url origin https://github.com/shiyaiteaun/android-app-testing.git`
-
----
-
-**Ready to push! 🎉**
-
+## ✅ After Push
+1. GitHub repository page ကို ဖွင့်ပါ
+2. Files update ဖြစ်သွားတာ စစ်ဆေးပါ
+3. **Actions** tab မှာ workflow run ကို စစ်ဆေးပါ

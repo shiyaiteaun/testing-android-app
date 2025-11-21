@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -67,19 +66,19 @@ public final class FragmentOrdersBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.emptyOrdersView;
-      LinearLayout emptyOrdersView = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout emptyOrdersView = rootView.findViewById(id);
       if (emptyOrdersView == null) {
         break missingId;
       }
 
       id = R.id.recyclerViewOrders;
-      RecyclerView recyclerViewOrders = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView recyclerViewOrders = rootView.findViewById(id);
       if (recyclerViewOrders == null) {
         break missingId;
       }
 
       id = R.id.tvTitle;
-      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTitle = rootView.findViewById(id);
       if (tvTitle == null) {
         break missingId;
       }

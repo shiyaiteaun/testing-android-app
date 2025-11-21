@@ -28,7 +28,7 @@
             android:layout_marginTop="4dp"
             android:text="Code: ABC123"
             android:textSize="12sp"
-            android:textColor="@android:color/darker_gray" />
+            android:textColor="@color/darker_gray" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:text="Quantity"
                     android:textSize="12sp"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/darker_gray" />
 
                 <TextView
                     android:id="@+id/tvQuantity"
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:text="Purchase Price"
                     android:textSize="12sp"
-                    android:textColor="@android:color/darker_gray" />
+                    android:textColor="@color/darker_gray" />
 
                 <TextView
                     android:id="@+id/tvPurchasePrice"
@@ -92,7 +92,7 @@
             android:text="Total: 100000 Ks"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@android:color/holo_green_dark" />
+            android:textColor="@color/holo_green_dark" />
 
         <TextView
             android:id="@+id/tvDate"
@@ -101,7 +101,7 @@
             android:layout_marginTop="4dp"
             android:text="Jan 01, 2025 10:00 AM"
             android:textSize="12sp"
-            android:textColor="@android:color/darker_gray" />
+            android:textColor="@color/darker_gray" />
 
         <TextView
             android:id="@+id/tvSupplier"
@@ -145,7 +145,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_weight="1"
                 android:text="@string/edit"
-                style="@style/Widget.Material3.Button.OutlinedButton" />
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDelete"
@@ -154,8 +154,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_weight="1"
                 android:text="@string/delete"
-                android:textColor="@android:color/white"
-                app:backgroundTint="@android:color/holo_red_dark" />
+                android:textColor="@color/white"
+                app:backgroundTint="@color/holo_red_dark" />
 
         </LinearLayout>
 

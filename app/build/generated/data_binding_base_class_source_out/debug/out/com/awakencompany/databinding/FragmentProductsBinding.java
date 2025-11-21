@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -78,31 +77,31 @@ public final class FragmentProductsBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.etSearch;
-      TextInputEditText etSearch = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etSearch = rootView.findViewById(id);
       if (etSearch == null) {
         break missingId;
       }
 
       id = R.id.llSearchFilter;
-      LinearLayout llSearchFilter = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout llSearchFilter = rootView.findViewById(id);
       if (llSearchFilter == null) {
         break missingId;
       }
 
       id = R.id.recyclerViewProducts;
-      RecyclerView recyclerViewProducts = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView recyclerViewProducts = rootView.findViewById(id);
       if (recyclerViewProducts == null) {
         break missingId;
       }
 
       id = R.id.spinnerCategory;
-      Spinner spinnerCategory = ViewBindings.findChildViewById(rootView, id);
+      Spinner spinnerCategory = rootView.findViewById(id);
       if (spinnerCategory == null) {
         break missingId;
       }
 
       id = R.id.tilSearch;
-      TextInputLayout tilSearch = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilSearch = rootView.findViewById(id);
       if (tilSearch == null) {
         break missingId;
       }

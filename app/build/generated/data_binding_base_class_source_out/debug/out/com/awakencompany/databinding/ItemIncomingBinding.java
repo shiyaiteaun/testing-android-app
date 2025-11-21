@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -104,73 +103,73 @@ public final class ItemIncomingBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnDelete;
-      MaterialButton btnDelete = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnDelete = rootView.findViewById(id);
       if (btnDelete == null) {
         break missingId;
       }
 
       id = R.id.btnEdit;
-      MaterialButton btnEdit = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnEdit = rootView.findViewById(id);
       if (btnEdit == null) {
         break missingId;
       }
 
       id = R.id.tvDate;
-      TextView tvDate = ViewBindings.findChildViewById(rootView, id);
+      TextView tvDate = rootView.findViewById(id);
       if (tvDate == null) {
         break missingId;
       }
 
       id = R.id.tvInvoiceNo;
-      TextView tvInvoiceNo = ViewBindings.findChildViewById(rootView, id);
+      TextView tvInvoiceNo = rootView.findViewById(id);
       if (tvInvoiceNo == null) {
         break missingId;
       }
 
       id = R.id.tvItemCode;
-      TextView tvItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemCode = rootView.findViewById(id);
       if (tvItemCode == null) {
         break missingId;
       }
 
       id = R.id.tvItemName;
-      TextView tvItemName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemName = rootView.findViewById(id);
       if (tvItemName == null) {
         break missingId;
       }
 
       id = R.id.tvLocation;
-      TextView tvLocation = ViewBindings.findChildViewById(rootView, id);
+      TextView tvLocation = rootView.findViewById(id);
       if (tvLocation == null) {
         break missingId;
       }
 
       id = R.id.tvPurchasePrice;
-      TextView tvPurchasePrice = ViewBindings.findChildViewById(rootView, id);
+      TextView tvPurchasePrice = rootView.findViewById(id);
       if (tvPurchasePrice == null) {
         break missingId;
       }
 
       id = R.id.tvQuantity;
-      TextView tvQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextView tvQuantity = rootView.findViewById(id);
       if (tvQuantity == null) {
         break missingId;
       }
 
       id = R.id.tvRemarks;
-      TextView tvRemarks = ViewBindings.findChildViewById(rootView, id);
+      TextView tvRemarks = rootView.findViewById(id);
       if (tvRemarks == null) {
         break missingId;
       }
 
       id = R.id.tvSupplier;
-      TextView tvSupplier = ViewBindings.findChildViewById(rootView, id);
+      TextView tvSupplier = rootView.findViewById(id);
       if (tvSupplier == null) {
         break missingId;
       }
 
       id = R.id.tvTotal;
-      TextView tvTotal = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotal = rootView.findViewById(id);
       if (tvTotal == null) {
         break missingId;
       }

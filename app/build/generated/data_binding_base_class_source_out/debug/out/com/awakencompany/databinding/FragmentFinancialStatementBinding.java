@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -75,31 +74,31 @@ public final class FragmentFinancialStatementBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.spinnerPeriod;
-      Spinner spinnerPeriod = ViewBindings.findChildViewById(rootView, id);
+      Spinner spinnerPeriod = rootView.findViewById(id);
       if (spinnerPeriod == null) {
         break missingId;
       }
 
       id = R.id.tvAverageTransaction;
-      TextView tvAverageTransaction = ViewBindings.findChildViewById(rootView, id);
+      TextView tvAverageTransaction = rootView.findViewById(id);
       if (tvAverageTransaction == null) {
         break missingId;
       }
 
       id = R.id.tvTotalItemsSold;
-      TextView tvTotalItemsSold = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalItemsSold = rootView.findViewById(id);
       if (tvTotalItemsSold == null) {
         break missingId;
       }
 
       id = R.id.tvTotalRevenue;
-      TextView tvTotalRevenue = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalRevenue = rootView.findViewById(id);
       if (tvTotalRevenue == null) {
         break missingId;
       }
 
       id = R.id.tvTotalTransactions;
-      TextView tvTotalTransactions = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalTransactions = rootView.findViewById(id);
       if (tvTotalTransactions == null) {
         break missingId;
       }

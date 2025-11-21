@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
@@ -73,31 +72,31 @@ public final class ItemOrderBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.tvCustomerName;
-      TextView tvCustomerName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvCustomerName = rootView.findViewById(id);
       if (tvCustomerName == null) {
         break missingId;
       }
 
       id = R.id.tvGrandTotal;
-      TextView tvGrandTotal = ViewBindings.findChildViewById(rootView, id);
+      TextView tvGrandTotal = rootView.findViewById(id);
       if (tvGrandTotal == null) {
         break missingId;
       }
 
       id = R.id.tvOrderDate;
-      TextView tvOrderDate = ViewBindings.findChildViewById(rootView, id);
+      TextView tvOrderDate = rootView.findViewById(id);
       if (tvOrderDate == null) {
         break missingId;
       }
 
       id = R.id.tvOrderId;
-      TextView tvOrderId = ViewBindings.findChildViewById(rootView, id);
+      TextView tvOrderId = rootView.findViewById(id);
       if (tvOrderId == null) {
         break missingId;
       }
 
       id = R.id.tvPaymentMethod;
-      TextView tvPaymentMethod = ViewBindings.findChildViewById(rootView, id);
+      TextView tvPaymentMethod = rootView.findViewById(id);
       if (tvPaymentMethod == null) {
         break missingId;
       }

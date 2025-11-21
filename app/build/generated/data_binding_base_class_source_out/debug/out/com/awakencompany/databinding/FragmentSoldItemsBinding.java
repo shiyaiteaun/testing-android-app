@@ -12,7 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -90,49 +89,49 @@ public final class FragmentSoldItemsBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.emptyView;
-      LinearLayout emptyView = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout emptyView = rootView.findViewById(id);
       if (emptyView == null) {
         break missingId;
       }
 
       id = R.id.llSummary;
-      LinearLayout llSummary = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout llSummary = rootView.findViewById(id);
       if (llSummary == null) {
         break missingId;
       }
 
       id = R.id.recyclerViewSoldItems;
-      RecyclerView recyclerViewSoldItems = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView recyclerViewSoldItems = rootView.findViewById(id);
       if (recyclerViewSoldItems == null) {
         break missingId;
       }
 
       id = R.id.spinnerPeriod;
-      Spinner spinnerPeriod = ViewBindings.findChildViewById(rootView, id);
+      Spinner spinnerPeriod = rootView.findViewById(id);
       if (spinnerPeriod == null) {
         break missingId;
       }
 
       id = R.id.tvTitle;
-      TextView tvTitle = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTitle = rootView.findViewById(id);
       if (tvTitle == null) {
         break missingId;
       }
 
       id = R.id.tvTotalItemsSold;
-      TextView tvTotalItemsSold = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalItemsSold = rootView.findViewById(id);
       if (tvTotalItemsSold == null) {
         break missingId;
       }
 
       id = R.id.tvTotalSales;
-      TextView tvTotalSales = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalSales = rootView.findViewById(id);
       if (tvTotalSales == null) {
         break missingId;
       }
 
       id = R.id.tvTotalTransactions;
-      TextView tvTotalTransactions = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalTransactions = rootView.findViewById(id);
       if (tvTotalTransactions == null) {
         break missingId;
       }

@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Customer Name *"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCustomerName"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Customer Address *"
-            app:startIconDrawable="@android:drawable/ic_menu_mylocation">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCustomerAddress"
@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Phone Number *"
-            app:startIconDrawable="@android:drawable/ic_menu_call">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCustomerPhone"

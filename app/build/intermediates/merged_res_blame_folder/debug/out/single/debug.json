@@ -1,0 +1,146 @@
+[
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_product.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_user.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\menu\\bottom_nav_user.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_dashboard.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_user_dashboard.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\menu_admin_menu.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\menu\\admin_menu.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_incoming_items.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_incoming_items.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_add_item.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_add_item.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_financial_statement.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_financial_statement.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_admin.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\menu\\bottom_nav_admin.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_add_user.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\dialog_add_user.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_cart.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_cart.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\menu_user_menu.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\menu\\user_menu.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_sold.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_sold.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_sold_items.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_sold_items.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_order.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_order.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_management.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_user_management.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cart.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_customer_info.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\dialog_customer_info.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_stock.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_stock.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_admin_dashboard.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_admin_dashboard.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_incoming.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_incoming.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_products.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_products.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_orders.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_orders.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_user.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_user.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_remaining_stock.xml.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_remaining_stock.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    }
+]

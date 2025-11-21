@@ -8,7 +8,6 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -97,61 +96,61 @@ public final class DialogAddUserBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.etEmail;
-      TextInputEditText etEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etEmail = rootView.findViewById(id);
       if (etEmail == null) {
         break missingId;
       }
 
       id = R.id.etFullName;
-      TextInputEditText etFullName = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etFullName = rootView.findViewById(id);
       if (etFullName == null) {
         break missingId;
       }
 
       id = R.id.etPassword;
-      TextInputEditText etPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etPassword = rootView.findViewById(id);
       if (etPassword == null) {
         break missingId;
       }
 
       id = R.id.etPhone;
-      TextInputEditText etPhone = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etPhone = rootView.findViewById(id);
       if (etPhone == null) {
         break missingId;
       }
 
       id = R.id.etUsername;
-      TextInputEditText etUsername = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etUsername = rootView.findViewById(id);
       if (etUsername == null) {
         break missingId;
       }
 
       id = R.id.tilEmail;
-      TextInputLayout tilEmail = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilEmail = rootView.findViewById(id);
       if (tilEmail == null) {
         break missingId;
       }
 
       id = R.id.tilFullName;
-      TextInputLayout tilFullName = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilFullName = rootView.findViewById(id);
       if (tilFullName == null) {
         break missingId;
       }
 
       id = R.id.tilPassword;
-      TextInputLayout tilPassword = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilPassword = rootView.findViewById(id);
       if (tilPassword == null) {
         break missingId;
       }
 
       id = R.id.tilPhone;
-      TextInputLayout tilPhone = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilPhone = rootView.findViewById(id);
       if (tilPhone == null) {
         break missingId;
       }
 
       id = R.id.tilUsername;
-      TextInputLayout tilUsername = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilUsername = rootView.findViewById(id);
       if (tilUsername == null) {
         break missingId;
       }

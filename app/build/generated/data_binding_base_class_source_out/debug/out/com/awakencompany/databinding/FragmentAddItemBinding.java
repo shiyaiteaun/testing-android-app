@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -153,133 +152,133 @@ public final class FragmentAddItemBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnSave;
-      MaterialButton btnSave = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnSave = rootView.findViewById(id);
       if (btnSave == null) {
         break missingId;
       }
 
       id = R.id.etCategory;
-      TextInputEditText etCategory = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etCategory = rootView.findViewById(id);
       if (etCategory == null) {
         break missingId;
       }
 
       id = R.id.etInvoiceNo;
-      TextInputEditText etInvoiceNo = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etInvoiceNo = rootView.findViewById(id);
       if (etInvoiceNo == null) {
         break missingId;
       }
 
       id = R.id.etItemCode;
-      TextInputEditText etItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etItemCode = rootView.findViewById(id);
       if (etItemCode == null) {
         break missingId;
       }
 
       id = R.id.etItemName;
-      TextInputEditText etItemName = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etItemName = rootView.findViewById(id);
       if (etItemName == null) {
         break missingId;
       }
 
       id = R.id.etLocation;
-      TextInputEditText etLocation = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etLocation = rootView.findViewById(id);
       if (etLocation == null) {
         break missingId;
       }
 
       id = R.id.etPurchasePrice;
-      TextInputEditText etPurchasePrice = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etPurchasePrice = rootView.findViewById(id);
       if (etPurchasePrice == null) {
         break missingId;
       }
 
       id = R.id.etQuantity;
-      TextInputEditText etQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etQuantity = rootView.findViewById(id);
       if (etQuantity == null) {
         break missingId;
       }
 
       id = R.id.etRemarks;
-      TextInputEditText etRemarks = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etRemarks = rootView.findViewById(id);
       if (etRemarks == null) {
         break missingId;
       }
 
       id = R.id.etSupplier;
-      TextInputEditText etSupplier = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etSupplier = rootView.findViewById(id);
       if (etSupplier == null) {
         break missingId;
       }
 
       id = R.id.etUnitPrice;
-      TextInputEditText etUnitPrice = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etUnitPrice = rootView.findViewById(id);
       if (etUnitPrice == null) {
         break missingId;
       }
 
       id = R.id.tilCategory;
-      TextInputLayout tilCategory = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilCategory = rootView.findViewById(id);
       if (tilCategory == null) {
         break missingId;
       }
 
       id = R.id.tilInvoiceNo;
-      TextInputLayout tilInvoiceNo = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilInvoiceNo = rootView.findViewById(id);
       if (tilInvoiceNo == null) {
         break missingId;
       }
 
       id = R.id.tilItemCode;
-      TextInputLayout tilItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilItemCode = rootView.findViewById(id);
       if (tilItemCode == null) {
         break missingId;
       }
 
       id = R.id.tilItemName;
-      TextInputLayout tilItemName = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilItemName = rootView.findViewById(id);
       if (tilItemName == null) {
         break missingId;
       }
 
       id = R.id.tilLocation;
-      TextInputLayout tilLocation = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilLocation = rootView.findViewById(id);
       if (tilLocation == null) {
         break missingId;
       }
 
       id = R.id.tilPurchasePrice;
-      TextInputLayout tilPurchasePrice = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilPurchasePrice = rootView.findViewById(id);
       if (tilPurchasePrice == null) {
         break missingId;
       }
 
       id = R.id.tilQuantity;
-      TextInputLayout tilQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilQuantity = rootView.findViewById(id);
       if (tilQuantity == null) {
         break missingId;
       }
 
       id = R.id.tilRemarks;
-      TextInputLayout tilRemarks = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilRemarks = rootView.findViewById(id);
       if (tilRemarks == null) {
         break missingId;
       }
 
       id = R.id.tilSupplier;
-      TextInputLayout tilSupplier = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilSupplier = rootView.findViewById(id);
       if (tilSupplier == null) {
         break missingId;
       }
 
       id = R.id.tilUnitPrice;
-      TextInputLayout tilUnitPrice = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilUnitPrice = rootView.findViewById(id);
       if (tilUnitPrice == null) {
         break missingId;
       }
 
       id = R.id.tvTotal;
-      TextView tvTotal = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotal = rootView.findViewById(id);
       if (tvTotal == null) {
         break missingId;
       }

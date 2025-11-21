@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_item.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_add_item.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_sold.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_sold.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_order.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_order.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_customer_info.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\dialog_customer_info.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_login.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_admin_dashboard.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_admin_dashboard.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_financial_statement.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_financial_statement.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_add_user.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\dialog_add_user.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_remaining_stock.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_remaining_stock.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_user_dashboard.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\activity_user_dashboard.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_cart.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_orders.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_orders.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_products.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_products.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_user_management.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_user_management.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_sold_items.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_sold_items.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_product.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_incoming.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_incoming.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_user.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_user.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_cart.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_cart.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_stock.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\item_stock.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_incoming_items.xml",
+        "source": "C:\\xampp\\htdocs\\awaken_company\\android_app\\app\\src\\main\\res\\layout\\fragment_incoming_items.xml"
+    }
+]

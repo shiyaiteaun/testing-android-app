@@ -14,8 +14,7 @@
             android:id="@+id/tilItemCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/item_code"
-            app:startIconDrawable="@android:drawable/ic_menu_sort_by_size">
+            android:hint="@string/item_code">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etItemCode"
@@ -30,8 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/item_name"
-            app:startIconDrawable="@android:drawable/ic_menu_edit">
+            android:hint="@string/item_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etItemName"
@@ -46,8 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/category"
-            app:startIconDrawable="@android:drawable/ic_menu_view">
+            android:hint="@string/category">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etCategory"
@@ -63,7 +60,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="@string/price"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces"
             app:suffixText="Ks">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -79,8 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:hint="@string/quantity"
-            app:startIconDrawable="@android:drawable/ic_menu_sort_by_size">
+            android:hint="@string/quantity">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etQuantity"
@@ -184,7 +179,7 @@
             android:text="Total: 0 Ks"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@android:color/holo_green_dark" />
+            android:textColor="#4CAF50" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"

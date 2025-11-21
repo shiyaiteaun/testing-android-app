@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -87,49 +86,49 @@ public final class ItemCartBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnDecrease;
-      MaterialButton btnDecrease = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnDecrease = rootView.findViewById(id);
       if (btnDecrease == null) {
         break missingId;
       }
 
       id = R.id.btnIncrease;
-      MaterialButton btnIncrease = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnIncrease = rootView.findViewById(id);
       if (btnIncrease == null) {
         break missingId;
       }
 
       id = R.id.btnRemove;
-      MaterialButton btnRemove = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnRemove = rootView.findViewById(id);
       if (btnRemove == null) {
         break missingId;
       }
 
       id = R.id.tvItemCode;
-      TextView tvItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemCode = rootView.findViewById(id);
       if (tvItemCode == null) {
         break missingId;
       }
 
       id = R.id.tvItemName;
-      TextView tvItemName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemName = rootView.findViewById(id);
       if (tvItemName == null) {
         break missingId;
       }
 
       id = R.id.tvQuantity;
-      TextView tvQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextView tvQuantity = rootView.findViewById(id);
       if (tvQuantity == null) {
         break missingId;
       }
 
       id = R.id.tvTotal;
-      TextView tvTotal = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotal = rootView.findViewById(id);
       if (tvTotal == null) {
         break missingId;
       }
 
       id = R.id.tvUnitPrice;
-      TextView tvUnitPrice = ViewBindings.findChildViewById(rootView, id);
+      TextView tvUnitPrice = rootView.findViewById(id);
       if (tvUnitPrice == null) {
         break missingId;
       }

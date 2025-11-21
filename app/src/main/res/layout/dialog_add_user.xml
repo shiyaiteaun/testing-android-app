@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username *"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etUsername"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Password *"
-            app:startIconDrawable="@android:drawable/ic_menu_view">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPassword"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Full Name *"
-            app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etFullName"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Email"
-            app:startIconDrawable="@android:drawable/ic_dialog_email">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmail"
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Phone"
-            app:startIconDrawable="@android:drawable/ic_menu_call">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPhone"

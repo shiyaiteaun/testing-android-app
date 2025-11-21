@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/search"
-            app:startIconDrawable="@android:drawable/ic_menu_search">
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etSearch"

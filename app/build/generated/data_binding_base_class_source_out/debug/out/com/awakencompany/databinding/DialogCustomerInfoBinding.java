@@ -8,7 +8,6 @@ import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -79,37 +78,37 @@ public final class DialogCustomerInfoBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.etCustomerAddress;
-      TextInputEditText etCustomerAddress = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etCustomerAddress = rootView.findViewById(id);
       if (etCustomerAddress == null) {
         break missingId;
       }
 
       id = R.id.etCustomerName;
-      TextInputEditText etCustomerName = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etCustomerName = rootView.findViewById(id);
       if (etCustomerName == null) {
         break missingId;
       }
 
       id = R.id.etCustomerPhone;
-      TextInputEditText etCustomerPhone = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etCustomerPhone = rootView.findViewById(id);
       if (etCustomerPhone == null) {
         break missingId;
       }
 
       id = R.id.tilCustomerAddress;
-      TextInputLayout tilCustomerAddress = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilCustomerAddress = rootView.findViewById(id);
       if (tilCustomerAddress == null) {
         break missingId;
       }
 
       id = R.id.tilCustomerName;
-      TextInputLayout tilCustomerName = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilCustomerName = rootView.findViewById(id);
       if (tilCustomerName == null) {
         break missingId;
       }
 
       id = R.id.tilCustomerPhone;
-      TextInputLayout tilCustomerPhone = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilCustomerPhone = rootView.findViewById(id);
       if (tilCustomerPhone == null) {
         break missingId;
       }

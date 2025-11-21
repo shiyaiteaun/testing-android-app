@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -110,73 +109,73 @@ public final class FragmentRemainingStockBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnLowStock;
-      MaterialButton btnLowStock = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnLowStock = rootView.findViewById(id);
       if (btnLowStock == null) {
         break missingId;
       }
 
       id = R.id.btnSearch;
-      MaterialButton btnSearch = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnSearch = rootView.findViewById(id);
       if (btnSearch == null) {
         break missingId;
       }
 
       id = R.id.emptyView;
-      LinearLayout emptyView = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout emptyView = rootView.findViewById(id);
       if (emptyView == null) {
         break missingId;
       }
 
       id = R.id.etSearch;
-      TextInputEditText etSearch = ViewBindings.findChildViewById(rootView, id);
+      TextInputEditText etSearch = rootView.findViewById(id);
       if (etSearch == null) {
         break missingId;
       }
 
       id = R.id.llSearch;
-      LinearLayout llSearch = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout llSearch = rootView.findViewById(id);
       if (llSearch == null) {
         break missingId;
       }
 
       id = R.id.llSummary;
-      LinearLayout llSummary = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout llSummary = rootView.findViewById(id);
       if (llSummary == null) {
         break missingId;
       }
 
       id = R.id.recyclerViewStock;
-      RecyclerView recyclerViewStock = ViewBindings.findChildViewById(rootView, id);
+      RecyclerView recyclerViewStock = rootView.findViewById(id);
       if (recyclerViewStock == null) {
         break missingId;
       }
 
       id = R.id.tilSearch;
-      TextInputLayout tilSearch = ViewBindings.findChildViewById(rootView, id);
+      TextInputLayout tilSearch = rootView.findViewById(id);
       if (tilSearch == null) {
         break missingId;
       }
 
       id = R.id.tvLowStock;
-      TextView tvLowStock = ViewBindings.findChildViewById(rootView, id);
+      TextView tvLowStock = rootView.findViewById(id);
       if (tvLowStock == null) {
         break missingId;
       }
 
       id = R.id.tvOutOfStock;
-      TextView tvOutOfStock = ViewBindings.findChildViewById(rootView, id);
+      TextView tvOutOfStock = rootView.findViewById(id);
       if (tvOutOfStock == null) {
         break missingId;
       }
 
       id = R.id.tvTotalItems;
-      TextView tvTotalItems = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalItems = rootView.findViewById(id);
       if (tvTotalItems == null) {
         break missingId;
       }
 
       id = R.id.tvTotalQuantity;
-      TextView tvTotalQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalQuantity = rootView.findViewById(id);
       if (tvTotalQuantity == null) {
         break missingId;
       }

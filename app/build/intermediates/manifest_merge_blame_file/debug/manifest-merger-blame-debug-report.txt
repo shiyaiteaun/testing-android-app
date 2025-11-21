@@ -1,0 +1,103 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.awakencompany"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:6:5-80
+11-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:6:22-77
+12    <uses-permission
+12-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:7:5-8:38
+13        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+13-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:7:22-78
+14        android:maxSdkVersion="32" />
+14-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:8:9-35
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:9:5-65
+15-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:9:22-62
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:10:5-67
+16-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:10:22-64
+17
+18    <application
+18-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:12:5-47:19
+19        android:name="com.awakencompany.AwakenApplication"
+19-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:13:9-42
+20        android:allowBackup="true"
+20-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:14:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.6.0] C:\Users\shiya\.gradle\caches\transforms-3\1324d091ce5a1399a29458dc473f2a57\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:extractNativeLibs="false"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:15:9-43
+25        android:label="@string/app_name"
+25-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:16:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:17:9-54
+27        android:supportsRtl="true"
+27-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:18:9-35
+28        android:theme="@style/Theme.AwakenCompany" >
+28-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:19:9-51
+29        <activity
+29-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:22:9-30:20
+30            android:name="com.awakencompany.ui.auth.SplashActivity"
+30-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:23:13-51
+31            android:exported="true"
+31-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:24:13-36
+32            android:theme="@style/Theme.AwakenCompany.Splash" >
+32-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:25:13-62
+33            <intent-filter>
+33-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:26:13-29:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:27:17-69
+34-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:27:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:28:17-77
+36-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:28:27-74
+37            </intent-filter>
+38        </activity>
+39        <activity
+39-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:32:9-35:52
+40            android:name="com.awakencompany.ui.auth.LoginActivity"
+40-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:33:13-50
+41            android:exported="false"
+41-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:34:13-37
+42            android:screenOrientation="portrait" />
+42-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:35:13-49
+43        <activity
+43-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:37:9-40:52
+44            android:name="com.awakencompany.ui.admin.AdminDashboardActivity"
+44-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:38:13-60
+45            android:exported="false"
+45-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:39:13-37
+46            android:screenOrientation="portrait" />
+46-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:40:13-49
+47        <activity
+47-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:42:9-45:52
+48            android:name="com.awakencompany.ui.user.UserDashboardActivity"
+48-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:43:13-58
+49            android:exported="false"
+49-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:44:13-37
+50            android:screenOrientation="portrait" />
+50-->C:\xampp\htdocs\awaken_company\android_app\app\src\main\AndroidManifest.xml:45:13-49
+51
+52        <service
+52-->[androidx.room:room-runtime:2.4.3] C:\Users\shiya\.gradle\caches\transforms-3\b56cb76ce3591ddf4e19c5f994c21e4d\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+53            android:name="androidx.room.MultiInstanceInvalidationService"
+53-->[androidx.room:room-runtime:2.4.3] C:\Users\shiya\.gradle\caches\transforms-3\b56cb76ce3591ddf4e19c5f994c21e4d\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+54            android:directBootAware="true"
+54-->[androidx.room:room-runtime:2.4.3] C:\Users\shiya\.gradle\caches\transforms-3\b56cb76ce3591ddf4e19c5f994c21e4d\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+55            android:exported="false" />
+55-->[androidx.room:room-runtime:2.4.3] C:\Users\shiya\.gradle\caches\transforms-3\b56cb76ce3591ddf4e19c5f994c21e4d\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+56    </application>
+57
+58</manifest>

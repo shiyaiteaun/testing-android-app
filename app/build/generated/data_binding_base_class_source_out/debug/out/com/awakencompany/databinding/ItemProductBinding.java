@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
@@ -79,37 +78,37 @@ public final class ItemProductBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnAddToCart;
-      MaterialButton btnAddToCart = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnAddToCart = rootView.findViewById(id);
       if (btnAddToCart == null) {
         break missingId;
       }
 
       id = R.id.tvCategory;
-      TextView tvCategory = ViewBindings.findChildViewById(rootView, id);
+      TextView tvCategory = rootView.findViewById(id);
       if (tvCategory == null) {
         break missingId;
       }
 
       id = R.id.tvItemCode;
-      TextView tvItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemCode = rootView.findViewById(id);
       if (tvItemCode == null) {
         break missingId;
       }
 
       id = R.id.tvItemName;
-      TextView tvItemName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemName = rootView.findViewById(id);
       if (tvItemName == null) {
         break missingId;
       }
 
       id = R.id.tvPrice;
-      TextView tvPrice = ViewBindings.findChildViewById(rootView, id);
+      TextView tvPrice = rootView.findViewById(id);
       if (tvPrice == null) {
         break missingId;
       }
 
       id = R.id.tvStock;
-      TextView tvStock = ViewBindings.findChildViewById(rootView, id);
+      TextView tvStock = rootView.findViewById(id);
       if (tvStock == null) {
         break missingId;
       }

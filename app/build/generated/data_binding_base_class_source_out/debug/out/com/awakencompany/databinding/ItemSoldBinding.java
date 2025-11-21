@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
@@ -81,43 +80,43 @@ public final class ItemSoldBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.tvDate;
-      TextView tvDate = ViewBindings.findChildViewById(rootView, id);
+      TextView tvDate = rootView.findViewById(id);
       if (tvDate == null) {
         break missingId;
       }
 
       id = R.id.tvItemCode;
-      TextView tvItemCode = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemCode = rootView.findViewById(id);
       if (tvItemCode == null) {
         break missingId;
       }
 
       id = R.id.tvItemName;
-      TextView tvItemName = ViewBindings.findChildViewById(rootView, id);
+      TextView tvItemName = rootView.findViewById(id);
       if (tvItemName == null) {
         break missingId;
       }
 
       id = R.id.tvQuantity;
-      TextView tvQuantity = ViewBindings.findChildViewById(rootView, id);
+      TextView tvQuantity = rootView.findViewById(id);
       if (tvQuantity == null) {
         break missingId;
       }
 
       id = R.id.tvTotalPrice;
-      TextView tvTotalPrice = ViewBindings.findChildViewById(rootView, id);
+      TextView tvTotalPrice = rootView.findViewById(id);
       if (tvTotalPrice == null) {
         break missingId;
       }
 
       id = R.id.tvUnitPrice;
-      TextView tvUnitPrice = ViewBindings.findChildViewById(rootView, id);
+      TextView tvUnitPrice = rootView.findViewById(id);
       if (tvUnitPrice == null) {
         break missingId;
       }
 
       id = R.id.tvUsername;
-      TextView tvUsername = ViewBindings.findChildViewById(rootView, id);
+      TextView tvUsername = rootView.findViewById(id);
       if (tvUsername == null) {
         break missingId;
       }

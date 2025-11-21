@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.awakencompany.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
@@ -62,13 +61,13 @@ public final class ActivityAdminDashboardBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.bottom_navigation;
-      BottomNavigationView bottomNavigation = ViewBindings.findChildViewById(rootView, id);
+      BottomNavigationView bottomNavigation = rootView.findViewById(id);
       if (bottomNavigation == null) {
         break missingId;
       }
 
       id = R.id.fragment_container;
-      FragmentContainerView fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      FragmentContainerView fragmentContainer = rootView.findViewById(id);
       if (fragmentContainer == null) {
         break missingId;
       }
