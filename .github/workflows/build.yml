@@ -15,10 +15,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Set up JDK 17
+    - name: Set up JDK 8
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '8'
         distribution: 'temurin'
         
     - name: Setup Android SDK
@@ -41,7 +41,7 @@ jobs:
       run: |
         if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
           echo "Generating Gradle wrapper..."
-          gradle wrapper --gradle-version 8.2
+          gradle wrapper --gradle-version 7.4
         fi
       shell: bash
       continue-on-error: true
