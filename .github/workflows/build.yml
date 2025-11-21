@@ -57,9 +57,21 @@ jobs:
     - name: Build APK
       id: build
       run: |
-        ./gradlew clean
-        ./gradlew assembleDebug --stacktrace 2>&1 | tee build.log
+        echo "Starting build process..."
+        echo "Java version:"
+        java -version
+        echo ""
+        echo "Gradle wrapper check:"
+        ls -la gradlew* || echo "Gradle wrapper not found"
+        echo ""
+        echo "Running gradlew clean..."
+        ./gradlew clean 2>&1 | tee -a build.log || echo "Clean failed" | tee -a build.log
+        echo ""
+        echo "Running gradlew assembleDebug..."
+        ./gradlew assembleDebug --stacktrace --info 2>&1 | tee -a build.log
         BUILD_EXIT_CODE=${PIPESTATUS[0]}
+        echo ""
+        echo "Build exit code: $BUILD_EXIT_CODE"
         if [ $BUILD_EXIT_CODE -eq 0 ]; then
           echo "BUILD_SUCCESS=true" >> $GITHUB_ENV
           echo "build_status=success" >> $GITHUB_OUTPUT
@@ -67,6 +79,12 @@ jobs:
           echo "BUILD_SUCCESS=false" >> $GITHUB_ENV
           echo "build_status=failed" >> $GITHUB_OUTPUT
         fi
+        # Ensure build.log exists
+        if [ ! -f "build.log" ]; then
+          echo "Build failed before log could be created" > build.log
+          echo "Build command may have failed immediately" >> build.log
+        fi
+        echo "Build log size: $(wc -l < build.log) lines"
         exit $BUILD_EXIT_CODE
       shell: bash
       continue-on-error: true
@@ -74,21 +92,26 @@ jobs:
     - name: Check build status
       run: |
         echo "=== Build Status Summary ==="
-        if grep -q "BUILD SUCCESSFUL" build.log; then
-          echo "✓ BUILD SUCCESSFUL"
-          echo "BUILD_FAILED=false" >> $GITHUB_ENV
-        elif grep -q "BUILD FAILED" build.log; then
-          echo "✗ BUILD FAILED"
-          echo "BUILD_FAILED=true" >> $GITHUB_ENV
-        else
-          echo "⚠ Build status unclear - checking exit code"
-          if [ "${{ env.BUILD_SUCCESS }}" != "true" ]; then
-            echo "✗ Build likely failed (exit code check)"
+        if [ -f "build.log" ]; then
+          if grep -q "BUILD SUCCESSFUL" build.log; then
+            echo "✓ BUILD SUCCESSFUL"
+            echo "BUILD_FAILED=false" >> $GITHUB_ENV
+          elif grep -q "BUILD FAILED" build.log; then
+            echo "✗ BUILD FAILED"
             echo "BUILD_FAILED=true" >> $GITHUB_ENV
           else
-            echo "? Build status unknown"
-            echo "BUILD_FAILED=false" >> $GITHUB_ENV
+            echo "⚠ Build status unclear - checking exit code"
+            if [ "${{ env.BUILD_SUCCESS }}" != "true" ]; then
+              echo "✗ Build likely failed (exit code check)"
+              echo "BUILD_FAILED=true" >> $GITHUB_ENV
+            else
+              echo "? Build status unknown"
+              echo "BUILD_FAILED=false" >> $GITHUB_ENV
+            fi
           fi
+        else
+          echo "⚠ Build log not found - build likely failed early"
+          echo "BUILD_FAILED=true" >> $GITHUB_ENV
         fi
         echo ""
         echo "BUILD_SUCCESS env: ${{ env.BUILD_SUCCESS }}"
@@ -96,26 +119,45 @@ jobs:
       shell: bash
       
     - name: Show build errors
-      if: env.BUILD_FAILED == 'true'
+      if: env.BUILD_FAILED == 'true' || env.BUILD_SUCCESS != 'true'
       run: |
         echo "=========================================="
         echo "⚠ BUILD FAILED - Showing Error Details"
         echo "=========================================="
         echo ""
-        echo "=== Kotlin Compilation Errors ==="
-        grep -B 5 -A 20 "e:" build.log | head -100 || echo "No 'e:' errors found"
-        echo ""
-        echo "=== Unresolved Reference Errors ==="
-        grep -B 3 -A 10 "Unresolved reference" build.log | head -50 || echo "No unresolved reference errors"
-        echo ""
-        echo "=== Type Mismatch Errors ==="
-        grep -B 3 -A 10 "Type mismatch" build.log | head -50 || echo "No type mismatch errors"
-        echo ""
-        echo "=== CompileDebugKotlin Section ==="
-        awk '/:app:compileDebugKotlin/,/FAILED|SUCCESS/' build.log | head -300 || echo "No compileDebugKotlin section"
-        echo ""
-        echo "=== Full Build Log (Last 500 lines) ==="
-        tail -500 build.log
+        if [ -f "build.log" ]; then
+          echo "=== Kotlin Compilation Errors ==="
+          grep -B 5 -A 20 "e:" build.log | head -100 || echo "No 'e:' errors found"
+          echo ""
+          echo "=== Unresolved Reference Errors ==="
+          grep -B 3 -A 10 "Unresolved reference" build.log | head -50 || echo "No unresolved reference errors"
+          echo ""
+          echo "=== Type Mismatch Errors ==="
+          grep -B 3 -A 10 "Type mismatch" build.log | head -50 || echo "No type mismatch errors"
+          echo ""
+          echo "=== CompileDebugKotlin Section ==="
+          awk '/:app:compileDebugKotlin/,/FAILED|SUCCESS/' build.log | head -300 || echo "No compileDebugKotlin section"
+          echo ""
+          echo "=== Full Build Log (Last 500 lines) ==="
+          tail -500 build.log
+        else
+          echo "⚠ Build log file not found!"
+          echo "This means the build failed before it could create a log file."
+          echo ""
+          echo "=== Checking for common issues ==="
+          echo "Java version:"
+          java -version || echo "Java not found"
+          echo ""
+          echo "Gradle wrapper:"
+          ls -la gradlew* || echo "Gradle wrapper not found"
+          echo ""
+          echo "Gradle wrapper JAR:"
+          ls -la gradle/wrapper/*.jar || echo "Gradle wrapper JAR not found"
+          echo ""
+          echo "Android SDK:"
+          echo "ANDROID_HOME: $ANDROID_HOME"
+          ls -la $ANDROID_HOME 2>/dev/null || echo "ANDROID_HOME not set or invalid"
+        fi
       shell: bash
     
     - name: Show build success message
